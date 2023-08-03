@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Carousel = (images) => {
+const Carousel = ({images}) => {
     const [index, setIndex] = useState(0)
     const image = images[index]
 
@@ -14,9 +14,9 @@ const Carousel = (images) => {
 
   return (
     <div>
-      <button onClick={next}>next</button>
-      <img src={image} alt="Carousel images" />
       <button onClick={previous}>previous</button>
+      <img src={image} alt="Carousel images" />
+      <button onClick={next}>next</button>
     </div>
   )
 }
